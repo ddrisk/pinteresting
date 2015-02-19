@@ -23,5 +23,7 @@ module Pinteresting
 
     # Required for Heroku
     config.assets.initialize_on_precompile = false
+    # Paperclip sucks
+    Paperclip.options[:command_path] = "/usr/local/bin/identify"
   end
 end
